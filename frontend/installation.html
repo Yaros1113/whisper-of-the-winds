@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Установка - Шёпот ветров</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcW0NAqAAAAAEfnjP2ht5RTVDZrk49cmyn7Y45L"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Логотип" class="logo">
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="installation.html">Установка</a>
+      <a href="forum.html">Форум</a>
+      <a href="updates.html">Обновления</a>
+    </nav>
+    <div id="authPanel"><button onclick="showLoginForm()">Войти</button></div>
+  </header>
+
+  <main class="main-content">
+    <h2>Инструкция по установке</h2>
+    
+    <div class="installation-steps">
+      <div class="step">
+        <h3>Шаг 1: Скачайте клиент</h3>
+        <button onclick="downloadClient()">Скачать WhisperOfTheWinds.zip (2.1 GB)</button>
+      </div>
+
+      <div class="step">
+        <h3>Шаг 2: Настройка клиента</h3>
+        <ol>
+          <li>Распакуйте архив в удобную папку</li>
+          <li>Запустите файл L2.exe</li>
+          <li>В настройках подключения укажите:
+            <ul>
+              <li>IP: play.whisper-winds.com</li>
+              <li>Порт: 2106</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 YR Games. Шёпот ветров. Все права защищены.</p>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script>
+    function downloadClient() {
+      // Логика скачивания
+      window.location.href = 'download/WisperOfTheWinds.zip';
+    }
+  </script>
+
+<div id="authModal" class="auth-modal">
+  <div class="auth-modal-content">
+    <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+    <div id="authFormContainer"></div>
+  </div>
+</div>
+</body>
+</html>
